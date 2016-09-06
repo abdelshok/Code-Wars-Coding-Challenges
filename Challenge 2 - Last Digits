@@ -1,0 +1,16 @@
+Create the function `lastDigit` that accepts two non-negative integer values and returns `true` if they have the same last digit, such as 27 and 57.
+
+The function accepts two non-negative integer arguments and returns `true` or `false` if they ahve the same last digit.
+
+function lastDigit(id1, id2) {
+	id1 = id1.toString();
+	id2 = id2.toString();
+	
+	if ( id1[id1.length-1] === id2[id2.length-1]) {
+		return true;
+	}
+	else  
+	{return false}
+}
+lastDigit(33,93)
+

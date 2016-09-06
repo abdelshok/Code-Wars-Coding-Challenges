@@ -1,0 +1,34 @@
+Create the function doYouPlayTheTheremin. If your name starts with the letter "S" or "s", you are playing the Theremin!
+Examples
+- INPUT: doYouPlayTheTheremin("Griffin")
+- OUTPUT: "Griffin does not play the Theremin!";
+
+- INPUT: doYouPlayTheTheremin("Scott");
+- OUTPUT: "Scott plays the Theremin!";
+
+///
+
+function doYouPlayTheTheremin(name) {
+	if (name == "Griffin") { 
+		return name + " does not play the Theremin!";
+	}
+	else if (name == "Scott" || name[0] === "s") {
+		return name + " plays the Theremin!";
+	}
+}
+doYouPlayTheTheremin("scott")
+
+// Too specific. Not dynamic enough. We need to make it less specific. If its an S, then we return plays the theremin.
+// If its not, then we return "does not play"
+
+function doYouPlayTheTheremin(name) {
+	if (name[0] === "S" || name.charAt(0) === "s") { 
+		return name + " plays the Theremin!";
+	}
+	else{return name + " does not play the Theremin!";
+	}
+}
+doYouPlayTheTheremin("scott")
+
+// Second one is better because less specific. The examples were just examples. Most important part was the upper and
+lower case "S"

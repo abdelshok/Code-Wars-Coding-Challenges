@@ -1,0 +1,31 @@
+Directions
+Create the function askPolitely that accepts a sentence 
+as an argument. If the last character of the sentence is 
+a question mark, then make sure the question ends with 
+the word "please".
+
+If the sentence is not a question, then return the 
+inputted string without modification. If the sentence 
+is a question, but already has a please, then also
+return the input without modification.
+
+/////
+
+function askPolitely(question) {
+	if (question[question.length-1] === "?" && question.indexOf("please") === -1) {
+		return question.slice(0, question.length-1) + " please?";
+	}
+	else if (question.indexOf("please") !== -1 && question[question.length-1] === "?") {
+		return question;
+	}
+	else { return question;}
+}
+askPolitely("May I borrow your pencil?");
+
+
+// All the tests worked out
+
+// Another way to do it would have been to use nested if statements. First declare an if statement with teh conditional of
+a question mark in the end (question[question.length-1] === "?"). When that is true, it can move inside the block and run
+other conditionals. One hwere there is a "please" (using indexOf method to see if there is one) and one where there isn't.
+And running the according strings respectively.

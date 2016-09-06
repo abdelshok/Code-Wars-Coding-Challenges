@@ -1,0 +1,34 @@
+DIRECTIONS:
+
+Create a function `greeting(name)` that accepts a name argument and returns a personalized greeting if a name is present.
+
+The Function takes a name as its only argument and returns one of the following strings:
+- INPUT: greeting("Charlotte");
+- OUTPUT: "Hello, Charlotte!";
+
+- INPUT: greeting();
+- OUTPUT: "Hello!";
+
+///
+
+Method 1:
+
+function greeting(name) {
+	if (name === undefined) {
+		return "Hello!"
+	}
+	else { return "Hello, " + name + "!"}
+}
+
+greeting("Joe")
+
+Method 2:
+
+function greeting(name) {
+if (name) {return "Hello, " + name + "!"}
+else {return "Hello!"}
+}
+greeting("Chad")
+
+// CONCLUSION: Method2 IS MUCH BETTER. Less specific and more reusable as it is not just limited to undefined data types, 
+// but any other falsy. Here we used falsy and truthy. If the value is a truthy, then the code is run. That is enough.

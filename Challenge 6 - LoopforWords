@@ -1,0 +1,32 @@
+DIRECTION:
+
+Create a function "repeat" that accepts two arguments, the string to repeat and the a number that represtents
+how many times to repeat the string argument.  Return a string that concatenates all the times the string is repeated.
+
+
+- INPUT: `repeat("yo",4);`
+- OUTPUT: `'yoyoyoyo'`
+
+////
+
+function repeat(word, number) {
+	var num = 0;
+	var string = "";
+	while (num < number) {
+		string += word;
+		num++;
+	}
+	return string;
+}
+repeat("yo",0);
+
+// Alternative with For Loop
+
+// function repeat(word, number) {
+// 	var string = "";
+// 	for (num = 0; num < number; num++) {
+// 		string += word;
+// 	}
+// 	return string;
+// }
+// repeat("spacejam",4);

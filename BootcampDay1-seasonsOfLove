@@ -1,0 +1,23 @@
+/*
+	SEASONS OF LOVE
+	
+	Complete the function so it generates the numbers of minutes in a year and logs that number to the console.
+*/
+
+var seasonsOfLove = function(year) {
+	return (year%4===0) ? (366*24*60) : (365*24*60);
+	// var i = year-2016;
+ //	if (year%i === 0) {
+ //		return 366*24*60;
+ //	}
+ //	else {return 365*24*60;}
+}
+
+seasonsOfLove(2014);
+
+
+// 2016 is a leap year. 366 days in leap year. 365 days in non-leap year.
+// Myfirst method was to write the var i = year-2016 in order to have a multiple or non multiple of 4 later. But I could 
+// skipped that if I directly wrote down (if year%4) {...} else if {...}. That would have been more direct
+// Then again, using ternary statements is much better. return (condition) ? (code if true) : (code if false). 
+// Ternary statements. TO REMEMBER.

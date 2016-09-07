@@ -1,0 +1,19 @@
+/*
+	NICKNAME GENERATOR
+	
+	Write a naive nickname generator function that takes a name and returns the first 3 or 4 letters (4 letters if the 3rd is a vowel)
+	
+	eg  nickName("daniel") ==> 'dan'
+		nickName("Beowulf") ==> 'Beow'
+*/
+
+	function nickName(name) {
+		if (name[2].toLowerCase() ==="a" || name[2].toLowerCase() ==="e" || name[2].toLowerCase() ==="i" ||
+		 name[2].toLowerCase() ==="u" || name[2].toLowerCase() ==="o") {
+			return name.slice(0,4);
+		}
+		else {return name.slice(0,3);
+		}}
+		
+nickName("Beowulf");
+

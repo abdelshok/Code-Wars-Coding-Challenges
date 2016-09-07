@@ -1,0 +1,56 @@
+/*
+Challenge - under_score to camelCase
+
+Write a function to convert a variable name from under_score format to camelCase.
+Make sure you support an unlimited number of underscores in the input!
+*/
+// Examples:
+// underToCamel("first_name"); // should return firstName
+// underToCamel("income_tax"); // should return incomeTax
+
+////////// WRITE /////////////
+
+function underToCamel(string){
+	var words = string.toString();
+	var array = words.split("_");
+	var hello = array[0];
+	for (i=1; i < array.length; i++) {
+			hello += array[i].replace(array[i][0], array[i][0].toUpperCase());
+		}
+		return hello;
+	}
+
+underToCamel("income_tax_what")
+
+// It WORKED !!! YES !!! NO FAILURE IN CODEPEN!
+// Question to ask: why does it replace the different elements with each other when i
+// define hello = array[0] + add (and previously declaring var add = array[i]...
+// when I do that, it gives out incomeTax, then incomeWhat and stays there.
+// Example:
+//
+
+// function underToCamel(string){
+// 	var words = string.toString();
+// 	var array = words.split("_");
+// 	var hello = "";
+// 	for (i=1; i < array.length; i++) {
+// 			add = array[i].replace(array[i][0], array[i][0].toUpperCase());
+// 			hello = array[0]+ add;
+// 		}
+// 		return hello;
+// 	}
+// underToCamel("income_tax_what")
+
+// Doesn't work because the hello variable gets redefined twice, as the add changes twice.
+// Whereas in the previous one, the expression is added to the already existing hello
+// variable
+
+// Method
+// var hello = "hello_you_whats";
+// var array = hello.split("_");
+// // Upper case of all the arrays that come after the first one.
+// var newUpper = array.replace(array[1][0], array[1][0].toUpperCase());
+// var elo = array[0]+newUpper;
+// var final = elo;
+// console.log(final)
+

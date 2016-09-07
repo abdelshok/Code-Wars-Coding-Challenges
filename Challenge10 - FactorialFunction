@@ -1,0 +1,25 @@
+/*
+[Factorial] 
+Create the function factorial(num) that returns the factorial of the parameter.
+
+**Example:**
+
+- INPUT: `factorial(4);`
+- Return Value: `24`
+// 4 * 3 * 2 * 1
+*/
+
+// WORK: 
+
+function factorial(num) {
+	var multi= 1;
+	for (i=num; i > 0; i--) {
+		multi *= i;
+	}
+	return multi;
+}
+factorial(5)
+
+// Sick!!! Fastest one done. Congratulations. Now experiment by not initalizing multi.
+// Doesn't work obviously. Because undefined * a number does not give a number, but NaN.
+// 

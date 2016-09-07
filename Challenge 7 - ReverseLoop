@@ -1,0 +1,46 @@
+
+// - Description
+
+// Create the function "reverseString" that reverses a string and returns the value of the reversed string. 
+NOTE: Do NOT use the .reverse() method.
+
+// INPUT: reverseString("hello");
+// OUTPUT: "olleh";
+
+//*** Write  ***
+
+// Solution works. But not right. 
+
+//  function reverseString(string){ 
+// 	var word = "";
+// 	// strin = string.toString();
+// 	for (i=0; i <= string.length ; i++) {
+// 		word += string[string.length-1-i];
+// 	}
+// 	return word;
+//  }
+// var reverse = reverseString("hello")
+// console.log(reverse.slice(0,"hello".length))
+
+//// 2nd Way:
+
+function reverseString(string) {
+	var finalStr= "";
+	
+	for (currentInd = string.length-1; currentInd >= 0 ; currentInd--) {
+		finalStr += string[currentInd]
+	}
+	return finalStr;
+}
+reverseString("hello")
+
+
+
+
+
+
+
+
+
+
+

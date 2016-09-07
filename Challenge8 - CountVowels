@@ -1,0 +1,85 @@
+/* 
+
+Vowel Count
+
+Create the function "vowelCount(str)" that takes a str parameter and returns the number of vowels 
+the string contains (ie. "Fullstack Academy" would return 5).  
+
+**Do not count 'y' as a vowel for this challenge.**
+
+**Example**
+
+- INPUT: `vowelCount("Good Job");`
+- Return Value: `3`
+
+*** Write the vowelCount Function below *** */
+
+function vowelCount(str) {
+	var vowelsCount = 0;
+	var string = str.toString();
+  for (var i = 0; i <= string.length - 1; i++) {
+  	  if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
+}
+	
+vowelCount("Helloooo");
+
+// I want the compiler to advance by one every time 
+// Check if the character is equal to a vowel
+// If equal to vowel, then count++
+// If not equal to vowel, move to next character
+// When reaches str.length, returns count total
+
+// function vowelCount(str) {
+// 	debugger;
+// 	var vowelsCount = 0;
+// 	var string = str.toString();
+//   for (var i = 0; i <= string.length - 1; i++) {
+//   	  if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+//       vowelsCount += 1;
+//     }
+//   }
+//   return vowelsCount;
+// }
+
+// Vowel Count, try number 2.
+
+function vowelCount2(str) {
+	var vowelCount2 = 0;
+	var string = str.toString();
+	for (i=0; i < string.length-1; i++) {
+		if (string[i] == "a" || string[i] == "i" || string[i] == "e" || string[i] == "o" || string[i] == "u" ) {
+			vowelCount2++;
+									}
+	}
+	return vowelCount2;
+}
+console.log(vowelCount2("hellooo"));
+
+// The one ABOVE WORKS !!!!!!
+
+/// OFFICIAL CORRECTION: 
+
+
+	// var vowels = 'aeiou',			
+	// 		string = string.toLowerCase(),
+	// 		count = 0;
+
+	// for(var i = 0; i < string.length; i++){
+	// 	if(vowels.indexOf(string[i]) >= 0){
+	// 		count++;
+	// 	}
+	// }
+
+	// return count;
+// }
+
+
+
+
+
+
+

@@ -16,6 +16,19 @@ return Math.min.apply(null,number); // null could be Math
 }
 findShort("How can all this be real")
 
+// SECOND WAY:
+
+function findShort(s){
+  var sArray = s.split(" ");
+  var shortest = sArray[0].length;
+    for (i=0; i<sArray.length; i++){
+      if(sArray[i].length < shortest){
+        shortest = sArray[i].length;
+      }
+    }
+    return shortest;
+}
+
 
 // Simple, given a string of words, return the length of the shortest word(s).
 

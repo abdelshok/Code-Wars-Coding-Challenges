@@ -1,0 +1,18 @@
+// https://www.codewars.com/kata/56747fd5cb988479af000028/solutions/javascript
+
+
+function getMiddle(s) {
+var middleC = "";
+
+if (s.length%2 === 0) {
+	middleC +=  s[(s.length/2)-1];
+	middleC += s[s.length/2];
+}
+
+else if (s.length%2 === 1) {
+	middleC += s[Math.floor(s.length/2)]
+}
+return middleC;
+  //Code goes here!
+}
+getMiddle("bonjour")

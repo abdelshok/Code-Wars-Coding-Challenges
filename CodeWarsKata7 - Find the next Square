@@ -1,0 +1,29 @@
+// Find the next Square
+/// https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/javascript
+// It works but takes longer than 8 seconds. Need to optimize the code.
+
+function findNextSquare(sq) {
+   var number = 0;
+   //debugger;
+for (var i=0; i<(sq/5); i++) {
+	if (sq/i === i) {
+  		console.log(i+1);
+  		number = Math.pow(i+1,2);
+  		}
+  	else if(number === 0) {number = -1;}
+  	}
+ return number;
+}
+findNextSquare(144)
+
+//// Tried to use ternary operator here, but didn't work...
+
+
+
+// function findNextSquare(sq) {
+//   var number = 0;
+//   debugger;
+// for (var i=0; i<sq; i++) {
+// 	 return sq/i === i ? Math.pow(i+1,2) : -1;
+// }}
+// findNextSquare(121)

@@ -22,3 +22,18 @@ for (i=2; i < max; i++) {
 
  }
  
+  
+// Things to improve on the code: I don't need to create a new variable and assign integer to it. i can directly use integer inside the for loop. 
+// I don't need to make it strictly equal in the if.
+// I ccan also put them all on the same line iwthout brackets: for (x) if (y) arrayN.push(i);
+// Also I can put the return in one line too: return res.length ? res: integer + " is prime"
+// This isn new vocab but the res.length ? verifies if there is a res length. Hence it does what I do when I compare it to 0 in my second if statemetn but more rapidly. As, if there is a res length and it returns true, it returns "res". And if it's not, it returns the second thinga fter the brackets: integer + " is prime"
+//  So in that case the SYNTAX is
+// xxxxx ? yyyy (if true) : zzz (if false);  (it's kind of like asking a question)
+
+
+// GREAT RESPONSE HERE:
+
+function divisors(integer) {
+  var res = []
+  for (var i = 2; i <= Math.floor(integer / 2); ++i) if (i

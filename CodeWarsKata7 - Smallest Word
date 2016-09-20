@@ -1,0 +1,26 @@
+// https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/solutions/javascript
+
+
+function findShort(s){
+
+var array = s.split(" ");
+var number = [];
+
+for (i=0; i<array.length;i++) {
+	number.push(array[i].length);
+}
+
+return Math.min.apply(null,number); // null could be Math
+	
+
+}
+findShort("How can all this be real")
+
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+// 1. Split all words into an Array
+	// a. create a variable that holds the  first word
+  // 2. Create a function that will go after every element of array and calculate
+  // 		a.  b. then use if to compare the first word to the second,s length. If the first word is bigger, then it stays the same, but if the second word is bigger then re - define the previous variable to that. keep going.

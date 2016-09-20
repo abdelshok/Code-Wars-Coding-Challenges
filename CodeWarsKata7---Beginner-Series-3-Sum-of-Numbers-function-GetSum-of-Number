@@ -1,0 +1,42 @@
+
+
+// Given two integers, which can be positive and negative, find the sum of all the numbers between including them too and return it. If both numbers are equal return a or b.
+
+// Note! a and b are not ordered!
+
+// Example: 
+// GetSum(1, 0) == 1   // 1 + 0 = 1
+// GetSum(1, 2) == 3   // 1 + 2 = 3
+// GetSum(0, 1) == 1   // 0 + 1 = 1
+// GetSum(1, 1) == 1   // 1 Since both are same
+// GetSum(-1, 0) == -1 // -1 + 0 = -1
+// GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
+
+
+function GetSum( a,b ){
+	
+	// debugger;
+var lower = 0;
+var higher = 0;
+var total = 0;
+
+if (a<b) {
+ lower = a;
+ higher = b;
+ }
+else if (b<a) {
+lower = b;
+higher = a;
+}
+ 
+// console.log(lower, higher);
+
+for (i = lower; i<=higher; i++) {
+	total += i;
+}
+
+return total;
+ 
+   //Good luck!
+}
+GetSum(-1,2)

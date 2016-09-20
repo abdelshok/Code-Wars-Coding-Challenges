@@ -1,4 +1,4 @@
-
+// https://www.codewars.com/kata/beginner-series-number-3-sum-of-numbers/train/javascript
 
 // Given two integers, which can be positive and negative, find the sum of all the numbers between including them too and return it. If both numbers are equal return a or b.
 

@@ -1,0 +1,24 @@
+// https://www.codewars.com/kata/find-the-divisors/solutions/javascript
+
+function divisors(integer) {
+	// debugger;
+var max = integer;
+var arrayN = [];
+
+for (i=2; i < max; i++) {
+  if (integer%i === 0) {
+  arrayN.push(i);  
+  }
+  
+  //else if (arrayN.length <= 0) {
+  //	return integer + " is prime";
+  //	}
+ 
+  }
+  
+  if (arrayN <= 0) {return integer + " is prime"}
+  else {return arrayN;}
+
+
+ }
+ 

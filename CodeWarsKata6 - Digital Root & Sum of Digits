@@ -1,0 +1,21 @@
+// NUMBER 10
+//SUM OF DIGITS- DIGITAL ROOT 
+// https://www.codewars.com/kata/541c8630095125aba6000c00/solutions/javascript
+
+
+function digital_root(n) {
+	debugger;
+var string = n.toString();
+console.log(string);
+var total = 0;
+for (var i=0; i<string.length; i++) {
+	total += Number(string[i]);
+	}
+
+var split = total.toString().split("");
+var newNumber = 0;
+for (e=0; e<split.length; e++) {
+	newNumber += Number(split[e]);
+}
+total = newNumber;
+return total;}

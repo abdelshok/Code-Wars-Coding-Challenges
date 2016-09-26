@@ -1,0 +1,22 @@
+// NUMBER 17
+// X's and O's 
+// https://www.codewars.com/kata/55908aad6620c066bc00002a/solutions/javascript
+
+function XO(str) {
+var exes = 0;
+var ohs = 0;
+
+for (a=0; a<str.length; a++) {
+	if (str[a] == "x" || str[a] == "X") {
+		exes++}}
+
+for (b=0; b<str.length; b++) {
+	if (str[b]== "o" || str[b]=="O") {
+		ohs++}}
+	
+if (exes == ohs) {
+	return true;}
+else {return false;}
+
+}
+XO("ooooodaaxxxxx")

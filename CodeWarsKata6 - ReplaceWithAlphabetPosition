@@ -1,0 +1,36 @@
+// REPLACE WITH ALPHABET POSITION
+// https://www.codewars.com/kata/546f922b54af40e1e90001da/solutions/javascript
+// ALL PASSED
+
+function alphabetPosition(text) {
+var string = "";
+var alphabet = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
+"v", "w", "x", "y", "z"]
+
+
+
+for (i=0; i<text.length; i++) {
+
+	if (text[i].toLowerCase() == "a" || text[i].toLowerCase() == "b" || text[i].toLowerCase() == "c" || text[i].toLowerCase()
+  == "d" || text[i].toLowerCase() == "e" || text[i].toLowerCase() == "f" || text[i].toLowerCase() == "g" || 
+  text[i].toLowerCase() == "h" || text[i].toLowerCase() == "i" || text[i].toLowerCase() == "j" || text[i].toLowerCase() == "k"
+  || text[i].toLowerCase() == "l" || text[i].toLowerCase() == "m" || text[i].toLowerCase() == "n" || 
+  text[i].toLowerCase() == "o" || text[i].toLowerCase() == "p" || text[i].toLowerCase() == "q" || text[i].toLowerCase() == "r"
+  || text[i].toLowerCase() == "s" || text[i].toLowerCase() == "t" || text[i].toLowerCase() == "u" ||
+  text[i].toLowerCase() == "v" || text[i].toLowerCase() == "w" || text[i].toLowerCase() == "x" || text[i].toLowerCase() == "y"
+  || text[i].toLowerCase() == "z") {
+  
+		string += alphabet.indexOf(text[i].toLowerCase()) + " ";
+		}}
+		
+	
+	
+var newString = string.substring(0, string.length-1);
+
+return newString;
+
+  }
+
+alphabetPosition("The sunset sets at twelve o' clock.")
+
+/

@@ -1,0 +1,24 @@
+// NUMBER 11 
+// VALID PHONE NUMBER
+// https://www.codewars.com/kata/525f47c79f2f25a4db000025/discuss#label-issue
+// Last test case was wrong without further indication. Other codewar people had similar issue. 
+
+
+function validPhoneNumber(n){
+var truth = false;
+
+if (n[0] === "(" && n[4] === ")") {
+	if (n[5] === " " && n[9] === "-") {
+		if ( Number(n[1]) < 10 && Number(n[2]) < 10 && Number(n[3]) < 10 && Number(n[6]) < 10 && Number(n[7]) < 10 && Number(n[8]) < 10 && Number(n[10]) < 10 && Number(n[11]) < 10 && Number(n[12]) < 10 && Number(n[13]) < 10) {
+			truth = true;
+		}
+	}
+}
+	
+if (truth === false) {
+	truth = false;
+}
+
+return truth;
+}
+validPhoneNumber("(123) 133-7820")

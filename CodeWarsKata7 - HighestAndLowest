@@ -1,0 +1,26 @@
+// NUMBER 14
+// HIGHEST AND LOWEST
+// https://www.codewars.com/kata/554b4ac871d6813a03000035/solutions/javascript
+
+function highAndLow(numbers){
+var array = numbers.split(" ");
+console.log(array);
+var highest = array[0];
+var lowest = array[0];
+
+for (i=0; i<array.length; i++) {
+	if (Number(array[i+1]) > Number(highest)) {
+		highest = Number(array[i+1]);
+	}}
+	
+for (a=0; a<array.length; a++) {
+	if (Number(array[a+1]) < Number(lowest)) {
+		lowest = Number(array[a+1]);
+	}}
+	
+	var total =  highest.toString() + " " + lowest.toString(); 
+
+return  total;
+}
+highAndLow("-5 -2");
+

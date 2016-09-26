@@ -1,0 +1,14 @@
+// NUMBER 15 
+// VOWEL COUNT 
+// https://www.codewars.com/kata/54ff3102c1bad923760001f3/solutions/javascript
+
+function getCount(str) {
+  var vowelsCount = 0;
+  
+for (i=0; i<str.length; i++) {
+  if (str[i].toLowerCase() == "i" || str[i].toLowerCase() == "a" || str[i].toLowerCase() == "e"
+  || str[i].toLowerCase() == "o" || str[i].toLowerCase() == "u") {
+  vowelsCount++;
+}}
+  return vowelsCount;
+}

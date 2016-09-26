@@ -1,0 +1,26 @@
+
+// NUMBER 13 
+// COMPLEMENTARY DNA
+// https://www.codewars.com/kata/554e4a2f232cdd87d9000038/solutions/javascript
+
+function DNAStrand(dna){
+
+var string = "";
+
+for (i=0; i<dna.length; i++) {
+	if (dna[i] == "T") {
+		string += "A";
+	}
+	if (dna[i] == "A") {
+		string += "T";
+	}
+	if (dna[i] == "C") {
+		string += "G";
+	}
+	if (dna[i] == "G") {
+		string += "C";
+	}}
+
+return string;
+}
+DNAStrand ("GTAT")

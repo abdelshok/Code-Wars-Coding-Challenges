@@ -1,0 +1,21 @@
+// NUMBER 16
+// CREDIT CARD MASK 
+// https://www.codewars.com/kata/5412509bd436bd33920011bc/solutions/javascript
+
+function maskify(cc) {
+	
+	if (cc.length<=4) {
+	string = cc;}
+	
+	if (cc.length>4) {
+	var firstVariable = cc.split("", cc.length-4);
+	var hashtag = firstVariable.toString().replace(/[0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]/gi, "#");
+	var finalHash = hashtag.replace(/,/gi, "")
+	console.log(finalHash);
+	var secondVariable = cc.substring(cc.length-4, cc.length);
+	console.log(secondVariable);
+	var string = finalHash + secondVariable;
+	return string;}
+
+return string;}
+maskify("1")

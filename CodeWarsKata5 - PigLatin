@@ -1,0 +1,24 @@
+// 21 - Kata 5
+// Pig latin
+// https://www.codewars.com/kata/520b9d2ad5c005041100000f/solutions/javascript
+
+function pigIt(str){
+var array = str.split(" ")
+console.log(array);
+var word = "";
+var pigLat = "";
+
+for (a=0; a<array.length;a++) {
+	word = array[a].substring(1, array[a].length) + array[a].substring(0,1) +"ay ";
+	pigLat += word;
+}
+return pigLat.slice(0, pigLat.length-1);
+	}
+pigIt('Pig latin is cool');
+
+// var helo = ["Abracadabra", "Abrolooo"]
+// var sl = helo[1].slice(1, 4);
+// console.log(sl);
+
+// Move the first letter of each word to the end of it, then add 'ay' to the end of the word.
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay

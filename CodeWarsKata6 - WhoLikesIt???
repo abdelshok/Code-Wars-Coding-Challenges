@@ -1,0 +1,23 @@
+// https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/ruby
+// NUMBER 19
+
+function likes(names){
+
+var string = "";
+
+if (names.length === 1) {
+	 string = names[0] + " likes this";}
+else if (names.length ===2 ) {
+	string = names[0] + " and "  + names[1] + " like this"
+} 
+else if (names.length ===3) {
+	string = names[0] + ", " + names[1] + " and " + names[2] + " like this"
+}
+else if (names.length >= 4) {
+	var number = names.length - 2;
+	string = names[0] + ", " + names[1] + "and " +  number + " others like this"
+}
+	 
+return string;}
+
+likes(["Jacob", "Alex", "Abdel", "Dom", "John", "Halsey"])

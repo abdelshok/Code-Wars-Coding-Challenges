@@ -1,10 +1,15 @@
-// https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/ruby
 // NUMBER 19
+// WHO LIKES IT???
+// https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/javascript
+
 
 function likes(names){
 
 var string = "";
 
+if (names.length < 1) {
+	string = "no one likes this";
+}
 if (names.length === 1) {
 	 string = names[0] + " likes this";}
 else if (names.length ===2 ) {
@@ -15,9 +20,9 @@ else if (names.length ===3) {
 }
 else if (names.length >= 4) {
 	var number = names.length - 2;
-	string = names[0] + ", " + names[1] + "and " +  number + " others like this"
+	string = names[0] + ", " + names[1] + " and " +  number + " others like this"
 }
 	 
-return string;}
+return string;	}
 
-likes(["Jacob", "Alex", "Abdel", "Dom", "John", "Halsey"])
+likes(["Jacob", "Alex", "Abdel", "Dom", "John", "Halsey", "Shiver", "i", "cried", "cause", "i", "cant", "be", "free"])

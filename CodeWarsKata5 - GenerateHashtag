@@ -1,0 +1,19 @@
+//////////////////////////////////// 22 - Kata 5 ///////////////////////////////////////
+// Generate hashtag
+// https://www.codewars.com/kata/52449b062fb80683ec000024/solutions/javascript
+
+function generateHashtag (str) {
+	var hashtag = "#";
+	var arraySplit = str.split(" ");
+	console.log(str);
+	
+	if (str === "" || str.length>140) {
+		return false;}
+	if (str.length>0) {
+	for (a=0;a<arraySplit.length;a++) {
+		hashtag += arraySplit[a].slice(0,1).toUpperCase() + arraySplit[a].slice(1,arraySplit[a].length);
+	}
+	return hashtag;}
+	
+}
+generateHashtag("")

@@ -1,0 +1,21 @@
+// 23/24 - Kata 5
+// What's A Perfect Power Anyway
+// https://www.codewars.com/kata/whats-a-perfect-power-anyway/train/javascript
+
+// The 32 tests passed, but it says that it takes more than 800ms, while it takes literally 1ms for it to appear on repl.it. 
+// How could I solve this issue?
+
+var isPP = function(n){
+var array = [];
+
+for (a=0;a<n; a++) {
+	for (b=0; b<n; b++) {
+		if (Math.pow(a,b) == n) {
+			array[0] = a;
+			array[1] = b;}
+		// else if (array.length < 0) {return undefined;}
+	}}
+	return array[0] ? array : null;
+	// return array;
+}
+isPP(16)

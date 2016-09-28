@@ -1,0 +1,40 @@
+// Fibonacci Sequence Descending
+
+// function fibo(num1, num2) {
+// 	debugger;
+
+// 	if (num1 == 2) {
+// 		 console.log(1);
+// 		 console.log(1);	}
+// 	else if (num1 > 2) {
+// 		var numSpe = num2-num1;
+// 		console.log(numSpe)
+// 		num2 = num1;
+		
+		
+// 		fibo(numSpe, num2);
+// 	}
+// }
+// fibo(89, 144);
+
+
+// Fibonacci Sequence Ascending 
+
+function fibo (n1, n2, max) {
+	
+	if (n2>max) {
+		console.log("Over");
+	}
+	if (n2<max) {
+		var newN = n1 + n2;
+		console.log(newN);
+		n1 = n2;
+		
+		fibo(n1, newN, max);
+	}
+}
+
+fibo(1,1, 20000);
+	
+	
+	

@@ -1,0 +1,20 @@
+///////////////////////////////// 26 - Kata 5 /////////////////////////////////////////
+// Largest 5 Numbers
+// https://www.codewars.com/kata/largest-5-digit-number-in-a-series/discuss/javascrip
+
+function solution(num) {
+var array = num.toString().split("");
+console.log(array);
+var totalArr = [];
+
+while (array.length > 1) {
+	var cut = array.slice(0,5);
+	totalArr.push(cut.join().replace(/,/gi, ""));
+	array.shift();
+}
+
+var ascending = totalArr.sort(function(a,b) {return b-a})
+return Number(ascending[0]);
+	
+}
+solution(03940404038288)

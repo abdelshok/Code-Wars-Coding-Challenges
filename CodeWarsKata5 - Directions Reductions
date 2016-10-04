@@ -1,0 +1,77 @@
+///////////////////////////////// 28 - Kata 5 //////////////////////////////
+//  Directions Reductions
+// https://www.codewars.com/kata/550f22f4d758534c1100025a/solutions/javascript
+
+// UNORDERED WAY
+
+function fib(n) {
+}
+function perimeter(n) {
+var fibo = [1,1];
+var total = 0;
+
+for (a=0; a<n-1; a++){
+	fibo.push(fibo[a] + fibo[a+1]);
+}
+console.log(fibo);
+
+for (b=0; b<fibo.length; b++) {
+	total += fibo[b];
+}
+return total*4;
+}
+perimeter(10)
+// perimeter n = 5, 80
+
+
+function dirReduc(arr){
+var howN = 0;
+var howS = 0;
+var howW = 0;
+var howE = 0;
+var directions = [];
+
+for (a=0; a<arr.length; a++) {
+	if (arr[a] == "NORTH") {
+		howN++;
+	}
+	else if (arr[a] == "SOUTH") {
+		howS++;
+	}
+	else if (arr[a] == "EAST") {
+		howE++;
+	}
+	else if (arr[a] == "WEST") {
+		howW++;
+	}}
+
+console.log(howN);
+console.log(howS);
+console.log(howW);
+console.log(howE);
+
+if (howN>howS) directions.push("NORTH");
+else if (howN == howS) console.log("North/South Cancel Out");
+else if (howS>howN) directions.push("SOUTH");
+
+if (howW>howE) directions.push("WEST");
+else if (howN == howS) console.log("WEST/EAST Cancel Out");
+else if (howE>howW) directions.push("EAST");
+
+return directions;
+}
+
+dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST", "NORTH", "SOUTH", "SOUTH"]);
+
+// ORDERED WAY
+
+
+function dirReduc(arr){
+
+for (a=0; a<arr.length; a++) {
+	if (arr[a] == "NORTH" && arr[a+1] == "SOUTH" || arr[a] == "SOUTH" && arr[a+1] == "NORTH") {
+		arr.shift();
+	}}
+return arr;
+}
+dirReduc(["SOUTH", "NORTH", "SOUTH", "EAST"]);

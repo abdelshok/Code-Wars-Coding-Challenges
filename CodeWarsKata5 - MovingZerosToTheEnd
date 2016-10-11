@@ -1,0 +1,15 @@
+///////////////////////////////// 33 - Kata 5 //////////////////////////////
+// Moving Zeros to The End
+// https://www.codewars.com/kata/52597aa56021e91c93000cb0/solutions/javascript
+
+var moveZeros = function (arr) {
+var numZero = 0,newArr = [];
+
+for (a=0; a<arr.length; a++) {
+	if (arr[a] !== 0) newArr.push(arr[a]);
+	else if (arr[a] === 0) numZero++;}
+	
+for (numZero; numZero>0; numZero--) newArr.push(0);
+return newArr;
+}
+moveZeros([false,1,0,1,2,0,1,3,0,"a"])

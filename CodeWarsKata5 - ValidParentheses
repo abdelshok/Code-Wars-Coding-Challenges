@@ -1,0 +1,23 @@
+///////////////////////////////// 31 - Kata 5 //////////////////////////////
+// Valid Parentheses
+// https://www.codewars.com/kata/52774a314c2333f0a7000688/solutions/javascript
+
+function validParentheses(parens){
+var number = 0;
+var paren = parens.split("")
+
+if (paren[0] !== ")" && paren[paren.length-1] !== "(") {
+for (a=0; a<paren.length; a++) {
+	if (paren[a] === "(") number++;
+	else if (paren[a] === ")") number--;
+}
+return number === 0 ? true : false;
+}
+else if (paren[0] === ")" || paren[3] === "(") return false;
+
+}
+validParentheses( "())(") 
+
+
+
+

@@ -1,0 +1,28 @@
+///////////////////////////////// 32 - Kata 5 //////////////////////////////
+// Human Readable Time
+// https://www.codewars.com/kata/52685f7382004e774f0001f7/solutions/javascript
+
+function humanReadable(seconds) {
+var HH = 0, MM = 0, SS = 0;
+var sec = seconds;
+
+for (;sec >= 3600;) {
+	sec = sec-3600;
+	HH++;}
+	
+for (;sec>=60;) {
+	sec = sec-60;
+	MM++;}
+
+for (;sec>0;) {
+	sec = sec-1;
+	SS++;}
+	
+if (HH.toString().length == 1) HH = "0" + HH.toString();
+if (MM.toString().length == 1) MM = "0" + MM.toString();
+if (SS.toString().length == 1) SS = "0" + SS.toString();
+
+return HH + ":" + MM + ":" + SS;
+}
+humanReadable(3600);
+

@@ -1,0 +1,87 @@
+///////////////////////////////// 30 - Kata 6 //////////////////////////////
+//  Decode Morse Code
+// https://www.codewars.com/kata/54b724efac3d5402db00065e/solutions/javascript
+
+
+decodeMorse = function(morseCode){
+var morseArr = morseCode.split(" ");
+console.log(morseArr);
+var morseTr = [];
+
+for (a=0; a<morseArr.length; a++) {
+	
+	if (morseArr[a] == ".-") morseTr.push("A");
+	else if (morseArr[a] == "-...") morseTr.push("B");
+	else if (morseArr[a] == "-.-.") morseTr.push("C");
+	else if (morseArr[a] == "-..") morseTr.push("D");
+	else if (morseArr[a] == ".") morseTr.push("E");
+	else if (morseArr[a] == "..-.") morseTr.push("F");
+	else if (morseArr[a] == "--.") morseTr.push("G");
+	else if (morseArr[a] == "....") morseTr.push("H");
+	else if (morseArr[a] == "..") morseTr.push("I");
+	else if (morseArr[a] == ".---") morseTr.push("J");
+	else if (morseArr[a] == "-.-") morseTr.push("K");
+	else if (morseArr[a] == ".-..") morseTr.push("L");
+	else if (morseArr[a] == "--") morseTr.push("M");
+	else if (morseArr[a] == "-.") morseTr.push("N");
+	else if (morseArr[a] == "---") morseTr.push("O");
+	else if (morseArr[a] == ".--.") morseTr.push("P");
+	else if (morseArr[a] == "--.-") morseTr.push("Q");
+	else if (morseArr[a] == ".-.") morseTr.push("R");
+	else if (morseArr[a] == "...") morseTr.push("S");
+	else if (morseArr[a] == "-") morseTr.push("T");
+	else if (morseArr[a] == "..-") morseTr.push("U");
+	else if (morseArr[a] == "...-") morseTr.push("V");
+	else if (morseArr[a] == ".--") morseTr.push("W");
+	else if (morseArr[a] == "-..-") morseTr.push("X");
+	else if (morseArr[a] == "-.--") morseTr.push("Y");
+	else if (morseArr[a] == "--..") morseTr.push("Z");
+	else if (morseArr[a] == "..--.-") morseTr.push("_");
+	else if (morseArr[a] == "...---...") morseTr.push("SOS");
+	else if (morseArr[a] == "-.-.--") morseTr.push("!");
+	else if (morseArr[a] == ".-..-.") morseTr.push('"');
+	else if (morseArr[a] == "...-..-") morseTr.push("$");
+	else if (morseArr[a] == ".-...") morseTr.push("&");
+	else if (morseArr[a] == ".----.") morseTr.push('\'');
+	else if (morseArr[a] == "-.--.") morseTr.push("(");
+	else if (morseArr[a] == "-.--.-") morseTr.push(")");
+	else if (morseArr[a] == ".-.-.") morseTr.push("+");
+	else if (morseArr[a] == "--..--") morseTr.push(",");
+	else if (morseArr[a] == "-....-") morseTr.push("-");
+	else if (morseArr[a] == ".-.-.-") morseTr.push(".");
+	else if (morseArr[a] == "-..-.") morseTr.push("/");
+	else if (morseArr[a] == "-----") morseTr.push("0");
+	else if (morseArr[a] == ".----") morseTr.push("1");
+	else if (morseArr[a] == "..---") morseTr.push("2");
+	else if (morseArr[a] == "...--") morseTr.push("3");
+	else if (morseArr[a] == "....-") morseTr.push("4");
+	else if (morseArr[a] == ".....") morseTr.push("5");
+	else if (morseArr[a] == "-....") morseTr.push("6");
+	else if (morseArr[a] == "--...") morseTr.push("7");
+	else if (morseArr[a] == "---..") morseTr.push("8");
+	else if (morseArr[a] == "----.") morseTr.push("9");
+	else if (morseArr[a] == "---...") morseTr.push(":");
+	else if (morseArr[a] == "-.-.-.") morseTr.push(";");
+	else if (morseArr[a] == "-...-") morseTr.push("=");
+	else if (morseArr[a] == "..--..") morseTr.push("?");
+	else if (morseArr[a] == ".--.-.") morseTr.push("@");
+	else if (morseArr[a] === "") morseTr.push(" ");
+}
+
+console.log(morseTr); 
+
+for (; morseTr[0] === " "; ) {
+if (morseTr[0] === " ") morseTr.shift();
+}
+
+for (;morseTr[morseTr.length-1] === " ";) {
+	if (morseTr[morseTr.length-1] === " ") morseTr.pop();
+}
+
+
+console.log(morseTr); 
+
+return morseTr.join().replace(/,/g, "").replace(/  /g," ");
+}
+decodeMorse('  .... . -.--   .--- ..- -.. . ')
+

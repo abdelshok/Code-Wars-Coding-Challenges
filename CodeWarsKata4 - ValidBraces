@@ -1,0 +1,24 @@
+///////////////////////////////// 34 - Kata 5 //////////////////////////////
+// Valid Braces
+// https://www.codewars.com/kata/5277c8a221e209d3f6000b56/solutions/javascript
+
+function validBraces(braces){
+  //TODO
+  
+  var map=[];
+  map[')']='(';
+  map[']']='[';
+  map['}']='{';
+  
+  var stack = [];
+  for(var i=0;i<braces.length;i++){
+    if(stack.length==0 || stack[stack.length-1]!=map[braces[i]]){
+      stack.push(braces[i]);
+    }
+    else{
+      stack.pop();
+    }
+    console.log(stack);
+  }
+  return (stack.length==0);
+}
